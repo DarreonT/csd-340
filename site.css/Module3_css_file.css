@@ -1,0 +1,41 @@
+/* Apply styles to the container */
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Style for headings (h1, h2, h3, h4) */
+h1, h2, h3, h4 {
+    background-color: #003366;  /* Change this to your preferred color */
+    color: white;  /* Make sure text is visible */
+    border: 1px solid #D6A800;  /* Gold border */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style links (anchor tags) */
+a {
+    color: #0066CC;  /* Adjust color to match your theme */
+    text-decoration: none;
+}
+
+/* Hover effect */
+a:hover {
+    color: #D6A800;  /* Change to a color that matches your scheme */
+}
+
+/* Visited links */
+a:visited {
+    color: #660099;  /* Adjust for a subtle contrast */
+}
+
+/* Style the unordered lists */
+ul {
+    list-style-type: none;  /* Removes bullets */
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
