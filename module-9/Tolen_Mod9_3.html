@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Assignment 9.3: JavaScript - Part 1
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <script>
+    // Declare four variables
+    var firstWord = "light";
+    var secondWord = "brave";
+    var thirdWord = "hope";
+    var fourthWord = "dream";
+
+    // Functions to update spans
+    function fillFirst() {
+      document.getElementById("word1").innerHTML = firstWord;
+    }
+
+    function fillSecond() {
+      document.getElementById("word2").innerHTML = secondWord;
+    }
+
+    function fillThird() {
+      document.getElementById("word3").innerHTML = thirdWord;
+    }
+
+    function fillFourth() {
+      document.getElementById("word4").innerHTML = fourthWord;
+    }
+  </script>
+</head>
+<body>
+  <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+  <p><strong>“The Quiet Strength” — A Poem</strong></p>
+
+  <p>
+    In the darkest night, we search for <span id="word1">________</span>,<br>
+    A distant star still burning bright.<br>
+    With hearts that ache but still stay <span id="word2">________</span>,<br>
+    We rise again with morning light.
+  </p>
+
+  <p>
+    The winds may howl, the skies may cry,<br>
+    Yet in our souls, there's <span id="word3">________</span> nearby.<br>
+    Through every trial, we softly gleam,<br>
+    Chasing the shape of every <span id="word4">________</span>.
+  </p>
+
+  <button type="button" onclick="fillFirst()">light</button>
+  <button type="button" onclick="fillSecond()">brave</button>
+  <button type="button" onclick="fillThird()">hope</button>
+  <button type="button" onclick="fillFourth()">dream</button>
+</body>
+</html>
