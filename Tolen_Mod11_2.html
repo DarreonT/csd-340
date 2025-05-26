@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    button {
+      margin-right: 10px;
+      padding: 8px 16px;
+    }
+    #output {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+  <input type="text" id="inputBox" placeholder="Enter item here...">
+  <br>
+  <button onclick="addItem()">Add</button>
+  <button onclick="deleteItem()">Delete Last Entry</button>
+  <button onclick="displayItems()">Display</button>
+
+  <div id="output"></div>
+
+  <script>
+    let itemList = [];
+
+    function addItem() {
+      const input = document.getElementById("inputBox").value;
+      if (input.trim() !== "") {
+        itemList.push(input);
+        alert(`Added: "${input}" at position ${itemList.length}`);
+        document.getElementById("inputBox").value = "";
+      } else {
+        alert("Please enter a value before adding.");
+      }
+    }
+
+    function deleteItem() {
+      if (itemList.length > 0) {
+        const removed = itemList.pop();
+        alert(`Deleted last entry: "${removed}"`);
+      } else {
+        alert("There is nothing to delete.");
+      }
+    }
+
+    function displayItems() {
+      const output = document.getElementById("output");
+      output.innerHTML = "";
+      if (itemList.length === 0) {
+        output.innerHTML = "<p>No items in the list.</p>";
+        return;
+      }
+      let listHTML = "<ol>";
+      for (let i = 0; i < itemList.length; i++) {
+        listHTML += `<li>${itemList[i]}</li>`;
+      }
+      listHTML += "</ol>";
+      output.innerHTML = listHTML;
+    }
+  </script>
+</body>
+</html>
